@@ -35,11 +35,10 @@ const Navbar = ({ children }: { children: React.ReactNode }) => {
             <>
               {menuItems.map((item) => (
                 <li key={item.id} className="my-3 md:my-0 items-center mr-4 md:inline-block block ">
-                  <Link href={item?.link}>
-                    <a href="" className="text-blue-800 hover:text-blue-900 transition">
-                      {item?.name}
-                    </a>
+                  <Link href={item.link} className="text-blue-800 hover:text-blue-900 transition" legacyBehavior>
+                     <a>{item.name}</a>
                   </Link>
+                 
                 </li>
               ))}
             </>
